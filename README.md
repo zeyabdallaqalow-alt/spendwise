@@ -1,42 +1,49 @@
-# SpendWise
+# SpendWise Budget Tracker
 
-## What SpendWise Does
+## Project Description
 
-SpendWise is a simple budget application that helps users enter their total budget and expenses. It calculates the remaining balance.
+SpendWise is a simple budget tracker that helps users enter their budget and expenses and calculate their remaining balance.
 
 ## JavaScript Concepts Implemented
 
-The project uses:
-- Variables
-- Data types
-- User input
-- Calculations
-- Functions
-- Console output
+This project uses JavaScript variables, user input, calculations, functions, and console output.
 
-## How Variables Are Used
+### Variables
 
-Variables are used to store the user's budget, expenses, and remaining balance.
+Variables are used to store important budgeting information:
 
-## How User Input Is Collected
+* `budget` stores the user's total budget.
+* `expense` stores the user's total expenses.
+* `remaining` stores the amount left after expenses.
 
-The application uses JavaScript `prompt()` to ask the user to enter their total budget and total expenses.
+### User Input
 
-## How Calculations Are Performed
+The `prompt()` function is used to collect the user's budget and expense information.
 
-The application subtracts total expenses from the total budget to calculate the remaining balance.
+The `Number()` function converts the user input into numbers so that calculations can be performed.
 
-For example:
+### Calculations
 
-Budget - Expenses = Remaining Balance
+SpendWise calculates the remaining balance by subtracting expenses from the budget:
 
-## How Functions Organize the Code
+`remaining = budget - expense`
 
-A function called `calculateRemainingBalance()` is used to calculate the remaining balance. Using a function keeps the calculation organized and reusable.
+### Functions
 
-## Files
+The project uses reusable functions to organize the JavaScript code.
 
-- `index.html` - Contains the webpage structure.
-- `style.css` - Contains the webpage styling.
-- `script.js` - Contains the JavaScript code.
-- `README.md` - Explains the SpendWise project.
+* `startBudget()` collects user input and displays the results.
+* `calculateRemaining()` calculates the remaining balance.
+
+### Displaying Results
+
+The calculated budget, expenses, and remaining balance are displayed on the webpage.
+
+The results are also displayed in the browser console using `console.log()`.
+
+## Project Files
+
+* `index.html` - Contains the structure of the SpendWise webpage.
+* `style.css` - Contains the styling for the webpage.
+* `script.js` - Contains the JavaScript logic.
+* `README.md` - Explains the project and JavaScript concepts used.

@@ -1,25 +1,28 @@
-// SpendWise JavaScript
-
-// Budget data
+// SpendWise budget data
 let budget = 0;
-let expenses = 0;
-
-// Ask the user for their budget
-budget = Number(prompt("Enter your total budget:"));
-
-// Ask the user for their expenses
-expenses = Number(prompt("Enter your total expenses:"));
+let expense = 0;
+let remaining = 0;
 
 // Function to calculate remaining balance
-function calculateRemainingBalance(budget, expenses) {
-    return budget - expenses;
+function calculateRemaining() {
+    return budget - expense;
 }
 
-// Calculate remaining balance
-let remainingBalance = calculateRemainingBalance(budget, expenses);
+// Function to enter budget and expense
+function startBudget() {
+    budget = Number(prompt("Enter your total budget:"));
+    expense = Number(prompt("Enter your total expenses:"));
 
-// Display results in the console
-console.log("SpendWise Budget Summary");
-console.log("Total Budget: " + budget);
-console.log("Total Expenses: " + expenses);
-console.log("Remaining Balance: " + remainingBalance);
+    // Calculate remaining balance
+    remaining = calculateRemaining();
+
+    // Display results on the webpage
+    document.getElementById("budget").textContent = budget;
+    document.getElementById("expense").textContent = expense;
+    document.getElementById("remaining").textContent = remaining;
+
+    // Display results in the console
+    console.log("Budget:", budget);
+    console.log("Expenses:", expense);
+    console.log("Remaining Balance:", remaining);
+}
