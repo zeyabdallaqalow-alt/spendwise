@@ -1,33 +1,307 @@
+/* SpendWise Dashboard Styling */
+
+* {
+    box-sizing: border-box;
+}
+
 body {
     font-family: Arial, sans-serif;
-    margin: 40px;
-    background-color: #f4f4f4;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f7f6;
+    color: #263238;
 }
 
-h1 {
+/* Dashboard Layout */
+.dashboard {
+    display: flex;
+    min-height: 100vh;
+}
+
+/* Sidebar */
+.sidebar {
+    width: 230px;
+    background-color: #176b87;
+    color: white;
+    padding: 25px;
+}
+
+.sidebar h2 {
     text-align: center;
 }
 
-p {
-    text-align: center;
+.sidebar ul {
+    list-style: none;
+    padding: 0;
 }
 
-button {
-    display: block;
-    margin: 20px auto;
-    padding: 10px 20px;
+.sidebar li {
+    padding: 15px 10px;
+    margin-bottom: 10px;
     cursor: pointer;
 }
 
-body {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+.sidebar li:hover {
+    background-color: #12536a;
+    border-radius: 5px;
 }
 
-h2 {
-    width: 300px;
-    padding: 15px;
+/* Main Content */
+.main-content {
+    flex: 1;
+    min-width: 0;
+    padding: 30px;
+}
+
+header {
     background-color: white;
-    border-radius: 8px;
+    padding: 20px;
+    border-radius: 10px;
+    margin-bottom: 25px;
+}
+
+header h1 {
+    color: #176b87;
+}
+
+/* Sections */
+section {
+    background-color: white;
+    padding: 20px;
+    margin-bottom: 25px;
+    border-radius: 10px;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+}
+
+section h2 {
+    color: #176b87;
+}
+
+/* Expense Cards */
+.cards {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+}
+
+.card {
+    background-color: #e3f2fd;
+    padding: 20px;
+    border-radius: 10px;
+    text-align: center;
+    border-left: 5px solid #176b87;
+}
+
+.card h3 {
+    color: #176b87;
+}
+
+/* Input Fields */
+input {
+    padding: 12px;
+    margin: 8px 5px 8px 0;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    max-width: 100%;
+}
+
+/* Buttons */
+button {
+    background-color: #176b87;
+    color: white;
+    padding: 12px 18px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #12536a;
+}
+
+/* Budget Message */
+#message {
+    font-weight: bold;
+}
+
+/* Expense List */
+#expenseList {
+    padding-left: 20px;
+}
+
+#expenseList li {
+    padding: 10px;
+    border-bottom: 1px solid #ddd;
+}
+
+/* Mobile Responsive Design */
+@media (max-width: 768px) {
+    .dashboard {
+        flex-direction: column;
+    }
+
+    .sidebar {
+        width: 100%;
+    }
+
+    .cards {
+        grid-template-columns: 1fr;
+    }
+
+    .main-content {
+        padding: 15px;
+    }
+}/* SpendWise Dashboard Styling */
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f7f6;
+    color: #263238;
+}
+
+/* Dashboard Layout */
+.dashboard {
+    display: flex;
+    min-height: 100vh;
+}
+
+/* Sidebar */
+.sidebar {
+    width: 230px;
+    background-color: #176b87;
+    color: white;
+    padding: 25px;
+}
+
+.sidebar h2 {
+    text-align: center;
+}
+
+.sidebar ul {
+    list-style: none;
+    padding: 0;
+}
+
+.sidebar li {
+    padding: 15px 10px;
+    margin-bottom: 10px;
+    cursor: pointer;
+}
+
+.sidebar li:hover {
+    background-color: #12536a;
+    border-radius: 5px;
+}
+
+/* Main Content */
+.main-content {
+    flex: 1;
+    min-width: 0;
+    padding: 30px;
+}
+
+header {
+    background-color: white;
+    padding: 20px;
+    border-radius: 10px;
+    margin-bottom: 25px;
+}
+
+header h1 {
+    color: #176b87;
+}
+
+/* Sections */
+section {
+    background-color: white;
+    padding: 20px;
+    margin-bottom: 25px;
+    border-radius: 10px;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+}
+
+section h2 {
+    color: #176b87;
+}
+
+/* Expense Cards */
+.cards {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+}
+
+.card {
+    background-color: #e3f2fd;
+    padding: 20px;
+    border-radius: 10px;
+    text-align: center;
+    border-left: 5px solid #176b87;
+}
+
+.card h3 {
+    color: #176b87;
+}
+
+/* Input Fields */
+input {
+    padding: 12px;
+    margin: 8px 5px 8px 0;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    max-width: 100%;
+}
+
+/* Buttons */
+button {
+    background-color: #176b87;
+    color: white;
+    padding: 12px 18px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #12536a;
+}
+
+/* Budget Message */
+#message {
+    font-weight: bold;
+}
+
+/* Expense List */
+#expenseList {
+    padding-left: 20px;
+}
+
+#expenseList li {
+    padding: 10px;
+    border-bottom: 1px solid #ddd;
+}
+
+/* Mobile Responsive Design */
+@media (max-width: 768px) {
+    .dashboard {
+        flex-direction: column;
+    }
+
+    .sidebar {
+        width: 100%;
+    }
+
+    .cards {
+        grid-template-columns: 1fr;
+    }
+
+    .main-content {
+        padding: 15px;
+    }
 }
